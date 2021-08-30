@@ -13,10 +13,13 @@ class Team
   end
 
   # インスタンスのメソッド（処理）
-  def show_team_result(calc_win_rate)
+  def show_team_result
     puts "#{self.name}の2020年の成績は#{self.win}勝#{self.lose}敗#{self.draw}分、勝率は#{calc_win_rate}です。"
   end
-end
+  
+  def calc_win_rate
+    self.win.to_f / (self.win.to_f + self.lose.to_f)
+  end
 
 # インスタンスの生成と変数への代入
 giants_A = Team.new("Giants", 67, 45, 8)
@@ -27,9 +30,10 @@ carp_A = Team.new("Carp", 52, 56, 12)
 swallows_A = Team.new("Swallows", 41, 69, 10)
 
 # インスタンスの使用
-giants_A.show_team_result(67.to_f / (67.to_f + 45.to_f))
-tigers_A.show_team_result(60.to_f / (60.to_f + 53.to_f))
-dragons_A.show_team_result(60.to_f / (55.to_f + 60.to_f))
-baystars_A.show_team_result(56.to_f / (56.to_f + 58.to_f))
-carp_A.show_team_result(52.to_f / (56.to_f + 52.to_f))
-swallows_A.show_team_result(41.to_f / (41.to_f + 69.to_f))
+giants_A.show_team_result()
+tigers_A.show_team_result()
+dragons_A.show_team_result()
+baystars_A.show_team_result()
+carp_A.show_team_result()
+swallows_A.show_team_result()
+end
