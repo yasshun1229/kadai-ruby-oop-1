@@ -20,7 +20,8 @@ class Team
   def calc_win_rate
     self.win.to_f / (self.win.to_f + self.lose.to_f)
   end
-
+end
+  
 # インスタンスの生成と変数への代入
 giants_A = Team.new("Giants", 67, 45, 8)
 tigers_A = Team.new("Tigers", 60, 53, 7)
@@ -36,4 +37,3 @@ dragons_A.show_team_result()
 baystars_A.show_team_result()
 carp_A.show_team_result()
 swallows_A.show_team_result()
-end
